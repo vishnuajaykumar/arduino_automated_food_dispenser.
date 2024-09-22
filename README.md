@@ -1,4 +1,4 @@
-# 🐾 Deg_Food_Dispenser_MVP 🐾
+# 🐾 Dog_Food_Dispenser_MVP 🐾
 
 **Author**: Vishnu AJay  
 **Date**: 9/26/2022  
