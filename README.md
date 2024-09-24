@@ -82,14 +82,6 @@ This project uses the **Arduino MetroMini** to control a food dispenser for pets
 
 ---
 
-## 🎉 Fancy Features Coming Soon
-
-- **RTC Module Integration**: Keep perfect time, even after power loss.
-- **Multiple Feed Times**: Set more custom feeding times throughout the day.
-- **Portion Control**: Customize the amount of food dispensed based on time.
-
----
-
 ## 🐾 Usage
 
 1. **Step 1**: Upload the code to your Arduino.
@@ -98,11 +90,6 @@ This project uses the **Arduino MetroMini** to control a food dispenser for pets
 
 ---
 
-## 🐕💡 Fun Fact
-
-Did you know that dogs have internal clocks? They can sense time and routine—so they'll be ready at exactly 8:00 AM and 5:00 PM for their meals! With this project, you'll always be on time for your dog's feeding schedule.
-
----
 
 ## 🎶 Melody
 
@@ -127,9 +114,77 @@ The food dispenser plays a series of notes for your dog during feeding times:
 
 ---
 
-## 🐶💬 **Your Pup Will Thank You!**
+```bash
+Computer
+  │
+  │ USB Cable
+  │
+  ▼
+Adafruit Metro Mini
+  ┌────────────────────────────────┐
+  │                                │
+  │  OLED SDA Pin (A4) ────────────┼──> SDA Pin on OLED Display
+  │  OLED SCL Pin (A5) ────────────┼──> SCL Pin on OLED Display
+  │                                │
+  │   ┌──────────────┐             │
+  │   │  PWM Pin 10  │─────────────┼──> Signal to Servo Motor
+  │   └──────────────┘             │
+  │                                │
+  │   ┌──────────────┐             │
+  │   │  Pin 7       │─────────────┼──> Push Button (Override)
+  │   └──────────────┘             │
+  │                                │
+  │   ┌──────────────┐             │
+  │   │  Pin 8       │─────────────┼──> Speaker/Buzzer
+  │   └──────────────┘             │
+  │                                │
+  │   ┌──────────────┐             │
+  │   │    GND       │─────────────┼──> Ground for all components (Servo, Button, OLED, Buzzer)
+  │   └──────────────┘             │
+  │                                │
+  │   ┌──────────────┐             │
+  │   │   5V (USB)   │─────────────┼──> Power for all components (Servo, Button, OLED, Buzzer)
+  │   └──────────────┘             │
+  └────────────────────────────────┘
 
-With the **Deg_Food_Dispenser_MVP**, feeding time becomes a seamless and enjoyable experience for both you and your furry friend. No more worries about missing meals or overfeeding — it's **"BARK BARK!! FOOD TIME"** on time, every time.
+Servo Motor
+  ┌────────────────────────────────┐
+  │  │                             │
+  │  │ Signal (from Metro Mini Pin 10) ───> Servo control signal
+  │  │                             │
+  │  │ Power (from 5V supply)      ───> Power for Servo
+  │  │                             │
+  │  │ Ground (shared with GND)    ───> Ground
+  └────────────────────────────────┘
 
----
+Push Button
+  ┌────────────────────────────────┐
+  │  │                             │
+  │  │ One leg to Metro Mini Pin 7 ───> Read button state (override)
+  │  │                             │
+  │  │ Other leg to GND            ───> Ground
+  └────────────────────────────────┘
+
+OLED Display
+  ┌────────────────────────────────┐
+  │  │                             │
+  │  │ SDA (to Metro Mini A4)      ───> I2C Data line
+  │  │                             │
+  │  │ SCL (to Metro Mini A5)      ───> I2C Clock line
+  │  │                             │
+  │  │ Power (to 5V)               ───> OLED Power
+  │  │                             │
+  │  │ Ground (to GND)             ───> OLED Ground
+  └────────────────────────────────┘
+
+Speaker/Buzzer
+  ┌────────────────────────────────┐
+  │  │                             │
+  │  │ Signal (from Metro Mini Pin 8) ───> Control signal to play melody
+  │  │                             │
+  │  │ Power (from 5V supply)      ───> Power for Speaker/Buzzer
+  │  │                             │
+  │  │ Ground (shared with GND)    ───> Ground
+  └────────────────────────────────┘
+```
 
