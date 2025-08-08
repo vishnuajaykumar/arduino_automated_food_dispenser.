@@ -1,30 +1,33 @@
-# 🐾 Dog_Food_Dispenser_MVP 🐾
+# Dog_Food_Dispenser 
 
 **Author**: Vishnu AJay  
 **Date**: 9/26/2022  
 **Revision**: B  
 
 ---
-**"Where every BARK means FOOD TIME!"**
 
-A fun and functional automatic food dispenser for your furry friend. 🐕 Designed to dispense food at scheduled times with a delightful melody and messages just for your pet. It even lets you manually feed with a button press! 🐾
+A fun and functional automatic food dispenser for your furry friend. Designed to dispense food at scheduled times with a delightful melody and messages just for your pet. It even lets you manually feed with a button press! 
 
 ---
 
+
+https://github.com/user-attachments/assets/c9148ccf-0589-498e-9b96-56d849c27bd5
+
+
 ## 🛠 Project Overview
 
-This project uses the **Arduino MetroMini** to control a food dispenser for pets. It dispenses food at scheduled times (or with a manual button press) and features an OLED screen for cute messages like **"BARK BARK!! FOOD TIME"** 🐶 and a melody to catch your pet's attention. The servo motor opens the food gate, and your hungry companion is satisfied!
+This project uses the **Arduino MetroMini** to control a food dispenser for pets. It dispenses food at scheduled times (or with a manual button press) and features an OLED screen for cute messages like **"BARK BARK!! FOOD TIME"** and a melody to catch your pet's attention. The servo motor opens the food gate, and your hungry companion is satisfied!
 
-## ✨ Components Used
+##  Components Used
 
-1. **🐕 Arduino MetroMini** (or any compatible Arduino board)
-2. **🦴 Servo Motor** - Opens the food dispenser at the right time.
-3. **🐾 Push Button** - Manual override for food dispensing.
-4. **🎵 Speaker** - Plays a melody at feeding time.
-5. **💬 OLED Display** - Displays messages for your pet.
-6. **⏰ TimeLib Library** - Keeps track of time for scheduled feedings.
+1. ** Arduino MetroMini** (or any compatible Arduino board)
+2. ** Servo Motor** - Opens the food dispenser at the right time.
+3. ** Push Button** - Manual override for food dispensing.
+4. ** Speaker** - Plays a melody at feeding time.
+5. ** OLED Display** - Displays messages for your pet.
+6. **TimeLib Library** - Keeps track of time for scheduled feedings.
 
-## 📚 Libraries Required
+##  Libraries Required
 
 - **Wire** - Used for I2C communication.
 - **SPI** - Used for SPI communication.
@@ -33,11 +36,11 @@ This project uses the **Arduino MetroMini** to control a food dispenser for pets
 - **TimeLib** - For capturing time in hours, minutes, and seconds.
 - **Servo** - To control the servo motor.
 
-### 📦 **Install these libraries via the Arduino IDE's Library Manager before uploading the code.**
+###  **Install these libraries via the Arduino IDE's Library Manager before uploading the code.**
 
 ---
 
-## 🐶 How It Works
+##  How It Works
 
 1. **Scheduled Feeding**: The food dispenser opens at two scheduled times — **8:00 AM** and **5:00 PM** — allowing your pet to chow down.
 2. **Manual Feeding**: Got a hungry pup? Press the button to feed your pet outside of schedule.
@@ -47,7 +50,7 @@ This project uses the **Arduino MetroMini** to control a food dispenser for pets
 
 ---
 
-## 🐕 Hardware Setup
+##  Hardware Setup
 
 - **Servo Motor**: Pin 10 controls the food gate.
 - **Push Button**: Pin 7 is for manual feeding control.
@@ -57,16 +60,16 @@ This project uses the **Arduino MetroMini** to control a food dispenser for pets
 
 ---
 
-## 🐾 Features
+##  Features
 
-- **⏰ Scheduled Feeding**: Food is dispensed automatically at 8:00 AM and 5:00 PM.
-- **🎵 Melody**: Plays a delightful melody while the food is dispensed.
-- **🐕 Manual Override**: Press the button to dispense food anytime.
-- **💬 OLED Display Messages**: Displays fun messages like **"BARK BARK!! FOOD TIME"** and **"Come back later"** to keep things playful.
+- ** Scheduled Feeding**: Food is dispensed automatically at 8:00 AM and 5:00 PM.
+- ** Melody**: Plays a delightful melody while the food is dispensed.
+- ** Manual Override**: Press the button to dispense food anytime.
+- ** OLED Display Messages**: Displays fun messages like **"BARK BARK!! FOOD TIME"** and **"Come back later"** to keep things playful.
 
 ---
 
-## 💡 Code Walkthrough
+##  Code Walkthrough
 
 ### `setup()`
 
@@ -82,7 +85,7 @@ This project uses the **Arduino MetroMini** to control a food dispenser for pets
 
 ---
 
-## 🐾 Usage
+##  Usage
 
 1. **Step 1**: Upload the code to your Arduino.
 2. **Step 2**: Wire the components according to the pin configuration.
@@ -91,7 +94,7 @@ This project uses the **Arduino MetroMini** to control a food dispenser for pets
 ---
 
 
-## 🎶 Melody
+##  Melody
 
 The food dispenser plays a series of notes for your dog during feeding times:
 - **C4, D4, E4, F4, G4, A4, B4** 
@@ -99,14 +102,14 @@ The food dispenser plays a series of notes for your dog during feeding times:
 
 ---
 
-## 🐕 Example Messages on OLED
+##  Example Messages on OLED
 
-- **BARK BARK!! FOOD TIME** 🦴
-- **Come Back Later** 🐕‍🦺
+- **BARK BARK!! FOOD TIME** 
+- **Come Back Later** 
 
 ---
 
-## 🚀 Future Improvements
+##  Future Improvements
 
 - Add an **RTC module** for real-time clock functionality.
 - **More feeding schedules**.
